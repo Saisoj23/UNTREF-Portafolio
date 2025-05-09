@@ -1,24 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geo:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
-@font-face {
-    font-family: EdgeDisplay;
-    font-weight: normal;
-    src: url('/Public/Fonts/edge-display/EdgeDisplay-Regular.otf');
-}
 
-@font-face {
-    font-family: EdgeDisplay;
-    font-weight: bold;
-    src: url('/Public/Fonts/edge-display/EdgeDisplay-Bold.otf');
-}
+
+
 
 * {
     padding: 0;
     margin: 0;
 
-    --dark-tone: #06202B;
-    --light-dark-tone: #7AE2CF;
-    --dark-light-tone: #077A7D;
+    --dark-tone: #132243;
     --light-tone: #F5EEDD;
     --white-tone: #fffdf8;
     --shadow: #00000033 2px 2px 3px 2px;
@@ -31,8 +25,20 @@
 :root {
     font-size: 16px;
     line-height: 1.5rem;
-    font-family: Lato, sans-serif;
+    font-family: Lexend, sans-serif;
     color: var(--white-tone);
+}
+
+.background {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background-blend-mode: hue;
+    background-image: url("/Public/Backgrounds/Background.png");
+    background-size: 100% 100%;
+    z-index: -1;
 }
 
 header {
@@ -42,22 +48,18 @@ header {
     z-index: 100;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 1rem;
     margin: 0px;
-    background-color: var(--dark-tone);
+    background-color: #13224388;
     color: var(--white-tone);
     box-shadow: var(--shadow);
     text-shadow: var(--text-shadow);
+    backdrop-filter: blur(4px);
 }
 
 header h1 {
-    font-family: EdgeDisplay, Lato, sans-serif;
+    font-family: Unica One, sans-serif;
     font-weight: bold;
-}
-
-main {
-    display: flex;
-    background-color: var(--dark-light-tone);
 }
 
 main figure, main h1, main h2, main h3, main figure, main p{
@@ -65,38 +67,42 @@ main figure, main h1, main h2, main h3, main figure, main p{
 }
 
 nav {
+    position: fixed;
+    top: 3.5rem;
+    bottom: 0px;
     line-height: 1.5rem;
     color: var(--white-tone);
     text-shadow: var(--text-shadow);
-    background-color: #1b536a;
+    background-color: #153c4a88;
+    width: 15%;
 }
 
-nav .menu {
-    position: sticky;
-    top: 5.5rem;
+nav h3 {
+    margin-top: 25px;
+    margin-bottom: 5px;
+    padding: 0px 15px;
+    background-color: var();
 }
 
-.menu h3 {
-    padding: 0px 10px;
-}
-
-.menu a {
+nav a {
     display: block;
-    padding: 10px;
-    transition: all 80ms ease-in;
+    padding: 15px;
+    transition: all 80ms ease-out;
 }
 
-.menu a:hover {
+nav a:hover {
     background-color: #30748f;
 } 
 
 article {
     padding: 0px 40px 40px 40px;
+    width: 80%;
+    justify-self: right;
 }
 
 article section {
     position: relative;
-    top: -5rem;
+    top: -5.4rem;
     margin-top: 2rem;
 }
 
@@ -122,7 +128,7 @@ article p {
 
 
 footer {
-    background-color: var(--dark-tone);
+    background-color: #11052488;
     padding: 16px;
     text-align: center;
 
@@ -199,11 +205,17 @@ figure img {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    transition: all 80ms ease-in;
+    transition: all 80ms ease-out;
 }
 
 .box-element:hover {
     scale: 1.1;
+    background-color: var(--dark-tone);
+    color: var(--light-tone);
+}
+
+.box-element:hover img{
+    filter: brightness(0) saturate(100%) invert(95%) sepia(3%) saturate(2797%) hue-rotate(319deg) brightness(102%) contrast(102%);
 }
 
 .box-element h4 {
@@ -214,7 +226,7 @@ figure img {
     width: 60%;
     align-self: center;
     justify-self: center;
-    filter:brightness(0.1);
+    filter: brightness(0) saturate(100%) invert(12%) sepia(7%) saturate(6052%) hue-rotate(182deg) brightness(96%) contrast(97%);
 }
 
 iframe {
