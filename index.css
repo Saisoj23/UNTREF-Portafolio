@@ -1,79 +1,306 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+@font-face {
+    font-family: EdgeDisplay;
+    font-weight: normal;
+    src: url('/Public/Fonts/edge-display/EdgeDisplay-Regular.otf');
+}
+
+@font-face {
+    font-family: EdgeDisplay;
+    font-weight: bold;
+    src: url('/Public/Fonts/edge-display/EdgeDisplay-Bold.otf');
+}
 
 * {
     padding: 0;
     margin: 0;
+
+    --dark-tone: #06202B;
+    --light-dark-tone: #7AE2CF;
+    --dark-light-tone: #077A7D;
+    --light-tone: #F5EEDD;
+    --white-tone: #fffdf8;
+    --shadow: #00000033 2px 2px 3px 2px;
+    --text-shadow: #00000055 2px 2px 2px;
+
+    box-sizing: border-box;
 }
+
 
 :root {
     font-size: 16px;
     line-height: 1.5rem;
     font-family: Lato, sans-serif;
-}
-
-article {
-    margin: 1rem;
-    color: rgb(36, 36, 36);
+    color: var(--white-tone);
 }
 
 header {
+    top: 0px;
+    position: sticky;
     display: flex;
+    z-index: 100;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     margin: 0px;
-    background-color: rgb(182, 213, 137);
-    color: rgb(36, 36, 36);
+    background-color: var(--dark-tone);
+    color: var(--white-tone);
+    box-shadow: var(--shadow);
+    text-shadow: var(--text-shadow);
 }
 
 header h1 {
-    font-family: Righteous;
-    font-weight: 200;
+    font-family: EdgeDisplay, Lato, sans-serif;
+    font-weight: bold;
 }
 
 main {
     display: flex;
-}
-
-nav {
-    background-color: hsl(196, 50%, 67%);
-    padding: 20px;
-    line-height: 2rem;
-    color: rgb(36, 36, 36);
-}
-
-nav ul {
-    list-style: none;
-}
-
-article {
-    margin: 0px;
-    padding: 20px;
-    background-color: antiquewhite;
-}
-
-footer {
-    background-color: rgb(182, 213, 137);
-    padding: 16px;
-    text-align: center;
-
-    bottom: 0px;
+    background-color: var(--dark-light-tone);
 }
 
 main figure, main h1, main h2, main h3, main figure, main p{
     margin-bottom: 1rem;
 }
 
-textarea {
-    resize: none;
-    height: 20rem;
+nav {
+    line-height: 1.5rem;
+    color: var(--white-tone);
+    text-shadow: var(--text-shadow);
+    background-color: #1b536a;
+}
+
+nav .menu {
+    position: sticky;
+    top: 5.5rem;
+}
+
+.menu h3 {
+    padding: 0px 10px;
+}
+
+.menu a {
+    display: block;
+    padding: 10px;
+    transition: all 80ms ease-in;
+}
+
+.menu a:hover {
+    background-color: #30748f;
+} 
+
+article {
+    padding: 0px 40px 40px 40px;
+}
+
+article section {
+    position: relative;
+    top: -5rem;
+    margin-top: 2rem;
+}
+
+article h2 {
+    text-shadow: var(--text-shadow);
+}
+
+article h3 {
+    justify-self: center;
+}
+
+article .content-box {
+    background-color: var(--light-tone);
+    padding: 2rem;
+    color: var(--dark-tone);
+    border-radius: 32px;
+    box-shadow: var(--shadow)
+}
+
+article p {
+    text-align: justify;
+}
+
+
+footer {
+    background-color: var(--dark-tone);
+    padding: 16px;
+    text-align: center;
+
+    bottom: 0px;
 }
 
 figure {
+    max-width: 50%;
     width: fit-content;
+    justify-self: center;
 }
 
 figcaption {
     text-align: center;
 }
+
+figure img {
+    max-width: 100%;
+    box-shadow: var(--shadow)
+}
+
+.timeline {
+    min-width: 15rem;
+    width: 40%;
+    max-width: 80%;
+    justify-self: center;
+    margin-bottom: 1.5rem;
+}
+
+.timeline-notes {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.timeline-ilustration {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 5rem);
+    justify-self: center;
+}
+
+.timeline-ilustration hr {
+    scale: 102% 100%;
+    flex-grow: 1;
+    background-color: var(--dark-tone);
+    height: 0.5rem;
+    border: none;
+}
+
+.timeline-ilustration div{
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--dark-tone);
+    border-radius: 100%;
+}
+
+.box-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-self: center;
+    justify-content: center;
+}
+
+.box-element {
+    padding: 0rem 1rem 1rem 1rem;
+    margin: 2rem;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 80ms ease-in;
+}
+
+.box-element:hover {
+    scale: 1.1;
+}
+
+.box-element h4 {
+    text-align: center;
+}
+
+.box-element img {
+    width: 60%;
+    align-self: center;
+    justify-self: center;
+    filter:brightness(0.1);
+}
+
+iframe {
+    position: relative;
+    width: 100%;
+    height: 30rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-self: center;
+}
+
+form input, form textarea {
+    width: 100%;
+}
+
+form label {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+form label, form input, form textarea, form button {
+    display: block;
+}
+
+form input, form textarea, form button {
+    box-shadow: var(--shadow);
+    padding: 10px;
+    border-radius: 12px;
+}
+
+form input {
+    outline: none;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+}
+
+form textarea {
+    resize: none;
+    height: 20rem;
+
+    outline: none;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+}
+
+form button {
+    outline: none;
+    border-width: 2px;
+    border-style: solid;
+    background-color: white;
+    border-color: white;
+    align-self: center;
+    font-weight: bold;
+}
+
+form input:placeholder-shown:not(:focus), form textarea:placeholder-shown:not(:focus), form button:not(:focus) {
+    border-color: #00000000;
+}
+
+form input:invalid {
+    border-color: #C51D25ff;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #FFBC00ff;
+}
+
+form input:valid, form textarea:valid, form button:hover {
+    border-color: #539937ff;
+}
+
+form input:placeholder-shown:hover:not(:focus), textarea:placeholder-shown:hover:not(:focus) {
+    border-color: gray;
+}
+
+a, button{
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
