@@ -5,29 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Josias Vallejos - Portafolio</title>
 
-    <!-- Google Fonts -->
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"> -->
+    <script src="/Public/burguer-button.js"></script>
+    <script src="/Public/splash-screen.js"></script>
 
-    <!-- CSS Reset -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"> -->
-    
-    <!-- Milligram CSS -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"> -->
-
-    <script src="/splash-screen.js" defer></script>
-
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/Public/index.css">
 </head>
 <body>
     <div class="background"></div>
 
+    <div id="splash" class="fullscreen">
+            <div class="background"></div>
+            <img src="/Public/SVG/SplashScreen/logicless.svg">
+            <div>
+                <h1>Josías E. Vallejos</h1>
+                <h2>Portafolio</h2>
+            </div>
+    </div>
+            
     <header>
+        <button id="burguer"><img  src="Public/SVG/menu-1-svgrepo-com.svg"></button>
         <h1>Josías E. Vallejos</h1>
-        <a><h3>Descargar CV</h3></a>
+        <a href="/Public/PDFs/Español - Josias Vallejos CV.pdf" download><h3>Descargar CV</h3></a>
     </header>
 
     <main>
-        <nav>
+        <nav class="hidden override-hidden">
             <h3>Contenidos</h3>
             <div>
                 <a href="#resumen">Resumen y aptitudes</a>
@@ -164,11 +166,10 @@
                 </form>
             </div>
         </article>
-
     </main>
 
     <footer>
-        <p>© Todos los derechos reservados</p>
+            <p>© Todos los derechos reservados</p>
     </footer>
 </body>
 </html>
