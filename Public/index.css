@@ -12,7 +12,10 @@
     padding: 0;
     margin: 0;
 
-    --dark-tone: #132243;
+    --color-a: #25082c;
+    --color-b: #3d1132;
+    --color-c: #73263d;
+    --dark-tone: #100726;
     --light-tone: #F5EEDD;
     --white-tone: #fffdf8;
     --shadow: #00000033 2px 2px 3px 2px;
@@ -102,7 +105,7 @@ header {
     align-items: center;
     padding: 1rem;
     margin: 0px;
-    background-color: #132243dd;
+    background-color: #100726dd;
     color: var(--white-tone);
     box-shadow: var(--shadow);
     backdrop-filter: blur(4px);
@@ -124,7 +127,7 @@ nav {
     line-height: 1.5rem;
     color: var(--white-tone);
     text-shadow: var(--text-shadow);
-    background-color: #153c4add;
+    background-color: #25082cdd;
     backdrop-filter: blur(4px);
     min-width: 10rem;
     width: 15%;
@@ -157,7 +160,7 @@ nav a {
 nav a:hover {
     background-color: var(--white-tone);
     text-shadow: none;
-    color: #153c4add;
+    color: var(--color-b);
 } 
 
 article {
@@ -196,7 +199,7 @@ article p {
 
 footer {
     position: relative;
-    background-color: #110524ff; 
+    background-color: var(--dark-tone);
     padding: 16px;
     text-align: center;
 
@@ -281,12 +284,8 @@ figure img {
 
 .box-element:hover {
     scale: 1.1;
-    background-color: var(--dark-tone);
+    background-color: var(--color-a);
     color: var(--light-tone);
-}
-
-.box-element:hover img{
-    filter: brightness(0) saturate(100%) invert(95%) sepia(3%) saturate(2797%) hue-rotate(319deg) brightness(102%) contrast(102%);
 }
 
 .box-element h4 {
@@ -297,7 +296,11 @@ figure img {
     width: 60%;
     align-self: center;
     justify-self: center;
-    filter: brightness(0) saturate(100%) invert(12%) sepia(7%) saturate(6052%) hue-rotate(182deg) brightness(96%) contrast(97%);
+    filter: brightness(0) saturate(100%) invert(10%) sepia(10%) saturate(6098%) hue-rotate(254deg) brightness(93%) contrast(106%);
+}
+
+.box-element:hover img{
+    filter: brightness(0) saturate(100%) invert(95%) sepia(3%) saturate(2797%) hue-rotate(319deg) brightness(102%) contrast(102%);
 }
 
 iframe {
@@ -388,11 +391,11 @@ a, button, #burguer {
 }
 
 a:hover {
-    color: #10908e;
+    color: #bd4035;
 }
 
 #burguer:hover {
-    filter: brightness(0) saturate(100%) invert(39%) sepia(80%) saturate(454%) hue-rotate(130deg) brightness(99%) contrast(94%);
+    filter: brightness(0) saturate(100%) invert(32%) sepia(14%) saturate(7028%) hue-rotate(337deg) brightness(89%) contrast(86%)
 }
 
 @media only screen and (max-aspect-ratio: 6/5) {
