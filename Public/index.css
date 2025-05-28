@@ -80,6 +80,60 @@ body > .background {
     height: 100vh !important;
 }
 
+#image-overlay {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 75;
+    background-color: rgba(0,0,0, .9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    transition: all 200ms ease-in;
+}
+
+.invisible {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 200ms ease-in;
+}
+
+
+#image-overlay figure{
+    position: relative;
+    height: 90%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#image-overlay img {
+    max-height: 80%;
+    max-width: 100%;
+    align-self: center;
+}
+
+#image-overlay figcaption button {
+    color: white;
+    background: none;
+    border: none;
+    text-align: center;
+    font-family: lexend, sans-serif;
+    font-size: 2rem;
+}
+
+#image-overlay figcaption:hover {
+    opacity: .5;
+}
+
+
 #burguer {
     width: 1rem;
     height: 1rem;
@@ -184,18 +238,24 @@ article h3 {
     justify-self: center;
 }
 
-article .content-box {
-    background-color: var(--light-tone);
-    padding: 2rem;
-    color: var(--dark-tone);
-    border-radius: 32px;
-    box-shadow: var(--shadow)
-}
-
 article p {
     text-align: justify;
 }
 
+article figure {
+    max-width: 50%;
+    width: fit-content;
+    justify-self: center;
+}
+
+article figcaption {
+    text-align: center;
+}
+
+article figure img {
+    max-width: 100%;
+    box-shadow: var(--shadow)
+}
 
 footer {
     position: relative;
@@ -208,20 +268,100 @@ footer {
     z-index: 5;
 }
 
-figure {
-    max-width: 50%;
-    width: fit-content;
-    justify-self: center;
+article .content-box {
+    background-color: var(--light-tone);
+    padding: 2rem;
+    color: var(--dark-tone);
+    border-radius: 32px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    justify-items: center;
 }
 
-figcaption {
+.profile {
+    width: 15rem;
+    border-radius: 100%;
+    box-shadow: var(--shadow);
+}
+
+.folder-container {
+    width: 100%;
+}
+
+.folder-title {
+    background-color: var(--light-tone);
+    position: relative;
+    cursor: pointer;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow);
+    border-radius: 24px;
+    overflow: hidden;
+    margin-top: 2rem;
+    z-index: 30;
 }
 
-figure img {
-    max-width: 100%;
-    box-shadow: var(--shadow)
+.folder-title:hover {
+    background-color: var(--color-a);
+    color: var(--light-tone);
 }
+
+.folder:nth-of-type(even) .folder-title{
+    flex-direction: row-reverse;
+}
+
+.folder-title h3 {
+    flex-grow: 1;
+    padding: 12px;
+    margin: 0;
+}
+
+.folder-title video {
+    height: 10rem;
+    width: 50%;
+    object-fit:cover;
+    background-color: yellowgreen;
+    transition: all 300ms ease-out;
+}
+
+.gif-flex {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.gif-flex video {
+    width: 33.33%;
+    flex-grow: 2;
+}
+
+.folder-content {
+    position: relative;
+    top: -24px;
+    background-color: #e7cca6;
+    border-radius: 0 0 24px 24px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 300ms ease-out;
+    opacity: 0;
+    box-shadow: var(--shadow);
+}
+
+.folder-title.visible img{
+    max-width: 0rem;
+}
+
+.folder-content.visible {
+    padding: 36px 12px 12px 12px;
+    max-height: 25rem;
+    opacity: 1;
+}
+
 
 .timeline {
     min-width: 15rem;
@@ -283,7 +423,6 @@ figure img {
 }
 
 .box-element:hover {
-    scale: 1.1;
     background-color: var(--color-a);
     color: var(--light-tone);
 }
@@ -301,6 +440,21 @@ figure img {
 
 .box-element:hover img{
     filter: brightness(0) saturate(100%) invert(95%) sepia(3%) saturate(2797%) hue-rotate(319deg) brightness(102%) contrast(102%);
+}
+
+.float-right {
+    position: relative;
+    height: 25rem;
+    float: right;
+}
+
+.art-logo {
+    width: 20rem;
+    filter: brightness(0) saturate(100%) invert(10%) sepia(10%) saturate(6098%) hue-rotate(254deg) brightness(93%) contrast(106%);
+}
+
+.art-logo:hover {
+    filter: brightness(0) saturate(100%) invert(32%) sepia(14%) saturate(7028%) hue-rotate(337deg) brightness(89%) contrast(86%);
 }
 
 iframe {
@@ -441,6 +595,34 @@ a:hover {
         margin: 0.5rem;
     }
 
+    .folder-title h3
+    {
+        padding: 6px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .folder-title img
+    {
+        height: 6rem;
+        max-width: 12rem;
+    }
+
+    .folder-content.visible
+    {
+        max-height: 180rem;
+    }
+
+    .gif-flex
+    {
+        flex-direction: column;
+    }
+
+    .gif-flex img
+    {
+        width: 100%;
+    }
+
     #burguer 
     {
         display: block;
@@ -457,8 +639,13 @@ a:hover {
         width: 95%;;
     }
 
-    iframe {
-    height: 40rem;
+    article .float-right
+    {
+        display: block;
+        height: 20rem;
+        justify-self: center;
     }
+
+    
 }
 

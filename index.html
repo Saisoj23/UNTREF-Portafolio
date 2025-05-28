@@ -1,175 +1,512 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Josias Vallejos - Portafolio</title>
 
     <script src="/Public/burguer-button.js"></script>
     <script src="/Public/splash-screen.js"></script>
+    <script src="/Public/open-image.js"></script>
+    <script src="/Public/open-folder.js"></script>
 
-    <link rel="stylesheet" href="/Public/index.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/Public/index.css" />
+  </head>
+  <body>
     <div class="background"></div>
 
     <div id="splash" class="fullscreen">
-            <div class="background"></div>
-            <img src="/Public/SVG/SplashScreen/logicless.svg">
-            <div>
-                <h1>Josías E. Vallejos</h1>
-                <h2>Portafolio</h2>
-            </div>
-    </div>
-            
-    <header>
-        <button id="burguer"><img  src="Public/SVG/menu-1-svgrepo-com.svg"></button>
+      <div class="background"></div>
+      <img src="/Public/SVG/SplashScreen/logicless.svg" />
+      <div>
         <h1>Josías E. Vallejos</h1>
-        <a href="/Public/PDFs/Español - Josias Vallejos CV.pdf" download><h3>Descargar CV</h3></a>
+        <h2>Portafolio</h2>
+      </div>
+    </div>
+
+    <div id="image-overlay" class="invisible" onclick="CloseImageView('')">
+      <figure>
+        <img id="image-full" src="" />
+        <figcaption>
+          <button onclick="CloseImageView('')">cerrar</button>
+        </figcaption>
+      </figure>
+    </div>
+
+    <header>
+      <button id="burguer">
+        <img src="Public/SVG/Iconos/menu-1-svgrepo-com.svg" />
+      </button>
+      <h1>Josías E. Vallejos</h1>
+      <a href="/Public/PDFs/Español - Josias Vallejos CV.pdf" download
+        ><h3>Descargar CV</h3></a
+      >
     </header>
 
     <main>
-        <nav class="hidden override-hidden">
-            <h3>Contenidos</h3>
-            <div>
-                <a href="#resumen">Resumen y aptitudes</a>
-                <a href="#experiencia">Experiencia laboral</a>
-                <a href="#certificaciones">Certificaciones</a>
-                <a href="#portafolio">Portafolio artístico</a>
-                <a href="#contacto">Contacto</a>
-            </div>
-        </nav>
+      <nav class="hidden override-hidden">
+        <h3>Contenidos</h3>
+        <div>
+          <a href="#sobremi">Sobre mí</a>
+          <a href="#habilidades">Habilidades</a>
+          <a href="#experiencia">Experiencia laboral</a>
+          <a href="#certificaciones">Certificaciones</a>
+          <a href="#portafolio">Portafolio artístico</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </nav>
 
-        <article>
-            <section id="resumen"></section>
-            <h2>Resumen y aptitudes</h2>
-            <div class="content-box">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati assumenda sequi beatae sed nihil ducimus commodi quo, minima incidunt molestias laudantium quam, est, dolore sint quasi? Porro nisi quo omnis?
-                Quidem, dolorum dicta ab velit blanditiis impedit. Possimus, animi adipisci, quibusdam delectus ratione nisi fuga totam iste commodi nostrum, pariatur quos porro veritatis magnam? Nulla quos nihil aliquam tenetur. Inventore.
-                Animi natus quaerat alias consequuntur pariatur eveniet. Deleniti aspernatur labore veniam nostrum doloremque expedita, blanditiis quis, voluptates ipsum quaerat, unde culpa excepturi praesentium. Veniam eius, sed consequuntur corporis adipisci ad.
+      <article>
+        <section id="sobremi"></section>
+        <h2>Sobre mí</h2>
+        <div class="content-box">
+          <img class="profile" src="Public/Imagenes/self.jpg" />
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+            assumenda sequi beatae sed nihil ducimus commodi quo, minima
+            incidunt molestias laudantium quam, est, dolore sint quasi? Porro
+            nisi quo omnis? Quidem, dolorum dicta ab velit blanditiis impedit.
+            Possimus, animi adipisci, quibusdam delectus ratione nisi fuga totam
+            iste commodi nostrum, pariatur quos porro veritatis magnam? Nulla
+            quos nihil aliquam tenetur. Inventore. Animi natus quaerat alias
+            consequuntur pariatur eveniet. Deleniti aspernatur labore veniam
+            nostrum doloremque expedita, blanditiis quis, voluptates ipsum
+            quaerat, unde culpa excepturi praesentium. Veniam eius, sed
+            consequuntur corporis adipisci ad.
+          </p>
+
+          <figure>
+            <img
+              src="https://preview.redd.it/97n501rxdfe11.jpg?auto=webp&s=dc4991ca43de2068230de238b6e6c17058e48ee8"
+            />
+            <figcaption>Lorem ipsum dolor sit amet</figcaption>
+          </figure>
+
+          <p>
+            beatae ab est ipsa iusto architecto? Sunt maiores sit sequi minus
+            perferendis iste fugit, labore repudiandae cum eum voluptatibus, rem
+            blanditiis error reiciendis sed reprehenderit nihil ut odio eos!
+            Tenetur asperiores nesciunt quaerat officia cumque ex reiciendis,
+            hic dolor eos sit laudantium non repudiandae, numquam dolore rerum
+            est, sed vero libero. Perspiciatis sequi necessitatibus delectus
+            magni ipsa itaque exercitationem. Assumenda saepe facere delectus ad
+            laborum atque ex fuga itaque eos nobis commodi, rem exercitationem
+            quod ipsa cupiditate debitis illum consequatur doloribus aperiam.
+            Mollitia quae porro deleniti rerum consectetur libero. Reiciendis
+            consequatur debitis voluptas iure in, eius nam praesentium labore
+            error tenetur ipsam, laborum, earum eligendi adipisci cumque aliquam
+            officiis vitae cum. Modi, cumque sed quasi accusantium et minus
+            perspiciatis. Iste, facilis reiciendis. Tempore vel minus ipsam
+            quidem provident. Cupiditate ratione repudiandae eligendi ipsam
+            aliquam veritatis aperiam perspiciatis magnam quibusdam! Voluptatum
+            soluta delectus error, possimus corporis corrupti! Sunt, consectetur
+            doloremque?
+          </p>
+        </div>
+
+        <section id="habilidades"></section>
+        <h2>Habilidades</h2>
+        <div class="content-box">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+            assumenda sequi beatae sed nihil ducimus commodi quo, minima
+            incidunt molestias laudantium quam, est, dolore sint quasi? Porro
+            nisi quo omnis? Quidem, dolorum dicta ab velit blanditiis impedit.
+            Possimus, animi adipisci, quibusdam delectus ratione nisi fuga totam
+            iste commodi nostrum, pariatur quos porro veritatis magnam? Nulla
+            quos nihil aliquam tenetur. Inventore. Animi natus quaerat alias
+            consequuntur pariatur eveniet. Deleniti aspernatur labore veniam
+            nostrum doloremque expedita, blanditiis quis, voluptates ipsum
+            quaerat, unde culpa excepturi praesentium. Veniam eius, sed
+            consequuntur corporis adipisci ad.
+          </p>
+
+          <div class="folder-container">
+            <div class="folder">
+              <div class="folder-title" onclick="OpenFolder(0)">
+                <h3>Edición de imágenes y diseño gráfico</h3>
+                <video
+                  autoplay
+                  muted
+                  loop
+                  src="Public/Video/design.mp4"
+                ></video>
+              </div>
+
+              <div class="folder-content">
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Fugiat voluptatem eaque ab enim tempore voluptatibus ad
+                  laboriosam. Ullam, atque, quam voluptates nemo hic nam earum
+                  alias eaque expedita nisi eveniet!
                 </p>
-
-                <figure>
-                    <img src="https://preview.redd.it/97n501rxdfe11.jpg?auto=webp&s=dc4991ca43de2068230de238b6e6c17058e48ee8">
-                    <figcaption>Lorem ipsum dolor sit amet</figcaption>
-                </figure>
-                
-                <p>beatae ab est ipsa iusto architecto? Sunt maiores sit sequi minus perferendis iste fugit, labore repudiandae cum eum voluptatibus, rem blanditiis error reiciendis sed reprehenderit nihil ut odio eos!
-                Tenetur asperiores nesciunt quaerat officia cumque ex reiciendis, hic dolor eos sit laudantium non repudiandae, numquam dolore rerum est, sed vero libero. Perspiciatis sequi necessitatibus delectus magni ipsa itaque exercitationem.
-                Assumenda saepe facere delectus ad laborum atque ex fuga itaque eos nobis commodi, rem exercitationem quod ipsa cupiditate debitis illum consequatur doloribus aperiam. Mollitia quae porro deleniti rerum consectetur libero.
-                Reiciendis consequatur debitis voluptas iure in, eius nam praesentium labore error tenetur ipsam, laborum, earum eligendi adipisci cumque aliquam officiis vitae cum. Modi, cumque sed quasi accusantium et minus perspiciatis.
-                Iste, facilis reiciendis. Tempore vel minus ipsam quidem provident. Cupiditate ratione repudiandae eligendi ipsam aliquam veritatis aperiam perspiciatis magnam quibusdam! Voluptatum soluta delectus error, possimus corporis corrupti! Sunt, consectetur doloremque?
-                </p>
-            </div>
-
-            <section id="experiencia"></section>
-            <h2>Experiencia laboral</h2>
-            <div class="content-box">
-                <h3>Trabajo 1</h3>
-                <div class="timeline">
-                    <ul class="timeline-notes">
-                        <li>10/10/2005</li>
-                        <li>10/10/2012</li>
-                    </ul>
-                    <div class="timeline-ilustration">
-                        <div></div><hr/><div></div>
-                    </div>
+                <div class="gif-flex">
+                  <video
+                    autoplay
+                    muted
+                    loop
+                    src="Public/Video/design1.mp4"
+                  ></video>
+                  <video
+                    autoplay
+                    muted
+                    loop
+                    src="Public/Video/design2.mp4"
+                  ></video>
+                  <video
+                    autoplay
+                    muted
+                    loop
+                    src="Public/Video/design3.mp4"
+                  ></video>
                 </div>
-                <p>beatae ab est ipsa iusto architecto? Sunt maiores sit sequi minus perferendis iste fugit, labore repudiandae cum eum voluptatibus, rem blanditiis error reiciendis sed reprehenderit nihil ut odio eos!
-                    Tenetur asperiores nesciunt quaerat officia cumque ex reiciendis, hic dolor eos sit laudantium non repudiandae, numquam dolore rerum est, sed vero libero. Perspiciatis sequi necessitatibus delectus magni ipsa itaque exercitationem.
-                    Assumenda saepe facere delectus ad laborum atque ex fuga itaque eos nobis commodi, rem exercitationem quod ipsa cupiditate debitis illum consequatur doloribus aperiam. Mollitia quae porro deleniti rerum consectetur libero.
-                    Reiciendis consequatur debitis voluptas iure in, eius nam praesentium labore error tenetur ipsam, laborum, earum eligendi adipisci cumque aliquam officiis vitae cum. Modi, cumque sed quasi accusantium et minus perspiciatis.
-                    Iste, facilis reiciendis. Tempore vel minus ipsam quidem provident. Cupiditate ratione repudiandae eligendi ipsam aliquam veritatis aperiam perspiciatis magnam quibusdam! Voluptatum soluta delectus error, possimus corporis corrupti! Sunt, consectetur doloremque?
+              </div>
+            </div>
+
+            <div class="folder">
+              <div class="folder-title" onclick="OpenFolder(1)">
+                <h3>Edición de video</h3>
+                <video autoplay muted loop src="Public/Video/video.mp4"></video>
+              </div>
+
+              <div class="folder-content">
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Fugiat voluptatem eaque ab enim tempore voluptatibus ad
+                  laboriosam. Ullam, atque, quam voluptates nemo hic nam earum
+                  alias eaque expedita nisi eveniet!
                 </p>
-
-                <h3>Trabajo 2</h3>
-                <div class="timeline">
-                    <ul class="timeline-notes">
-                        <li>10/10/2012</li>
-                        <li>10/10/2018</li>
-                    </ul>
-                    <div class="timeline-ilustration">
-                        <div></div><hr/><div></div>
-                    </div>
+                <div class="gif-flex">
+                  <video
+                    autoplay
+                    muted
+                    loop
+                    src="Public/Video/video1.mp4"
+                  ></video>
+                  <video
+                    autoplay
+                    muted
+                    loop
+                    src="Public/Video/video2.mp4"
+                  ></video>
+                  <video
+                    autoplay
+                    muted
+                    loop
+                    src="Public/Video/video3.mp4"
+                  ></video>
                 </div>
-                <p>beatae ab est ipsa iusto architecto? Sunt maiores sit sequi minus perferendis iste fugit, labore repudiandae cum eum voluptatibus, rem blanditiis error reiciendis sed reprehenderit nihil ut odio eos!
-                    Tenetur asperiores nesciunt quaerat officia cumque ex reiciendis, hic dolor eos sit laudantium non repudiandae, numquam dolore rerum est, sed vero libero. Perspiciatis sequi necessitatibus delectus magni ipsa itaque exercitationem.
-                    Assumenda saepe facere delectus ad laborum atque ex fuga itaque eos nobis commodi, rem exercitationem quod ipsa cupiditate debitis illum consequatur doloribus aperiam. Mollitia quae porro deleniti rerum consectetur libero.
-                    Reiciendis consequatur debitis voluptas iure in, eius nam praesentium labore error tenetur ipsam, laborum, earum eligendi adipisci cumque aliquam officiis vitae cum. Modi, cumque sed quasi accusantium et minus perspiciatis.
-                    Iste, facilis reiciendis. Tempore vel minus ipsam quidem provident. Cupiditate ratione repudiandae eligendi ipsam aliquam veritatis aperiam perspiciatis magnam quibusdam! Voluptatum soluta delectus error, possimus corporis corrupti! Sunt, consectetur doloremque?
+              </div>
+            </div>
+
+            <div class="folder">
+              <div class="folder-title" onclick="OpenFolder(2)">
+                <h3>Modelado y animación 3D</h3>
+                <video autoplay muted loop src="Public/Video/3d.mp4"></video>
+              </div>
+
+              <div class="folder-content">
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Fugiat voluptatem eaque ab enim tempore voluptatibus ad
+                  laboriosam. Ullam, atque, quam voluptates nemo hic nam earum
+                  alias eaque expedita nisi eveniet!
                 </p>
-
-                <h3>Trabajo 3</h3>
-                <div class="timeline">
-                    <ul class="timeline-notes">
-                        <li>10/10/2018</li>
-                        <li>Actualidad</li>
-                    </ul>
-                    <div class="timeline-ilustration">
-                        <div></div><hr/><div></div>
-                    </div>
+                <div class="gif-flex">
+                  <video autoplay muted loop src="Public/Video/3d1.mp4"></video>
+                  <video autoplay muted loop src="Public/Video/3d2.mp4"></video>
+                  <video autoplay muted loop src="Public/Video/3d3.mp4"></video>
                 </div>
-                <p>beatae ab est ipsa iusto architecto? Sunt maiores sit sequi minus perferendis iste fugit, labore repudiandae cum eum voluptatibus, rem blanditiis error reiciendis sed reprehenderit nihil ut odio eos!
-                    Tenetur asperiores nesciunt quaerat officia cumque ex reiciendis, hic dolor eos sit laudantium non repudiandae, numquam dolore rerum est, sed vero libero. Perspiciatis sequi necessitatibus delectus magni ipsa itaque exercitationem.
-                    Assumenda saepe facere delectus ad laborum atque ex fuga itaque eos nobis commodi, rem exercitationem quod ipsa cupiditate debitis illum consequatur doloribus aperiam. Mollitia quae porro deleniti rerum consectetur libero.
-                    Reiciendis consequatur debitis voluptas iure in, eius nam praesentium labore error tenetur ipsam, laborum, earum eligendi adipisci cumque aliquam officiis vitae cum. Modi, cumque sed quasi accusantium et minus perspiciatis.
-                    Iste, facilis reiciendis. Tempore vel minus ipsam quidem provident. Cupiditate ratione repudiandae eligendi ipsam aliquam veritatis aperiam perspiciatis magnam quibusdam! Voluptatum soluta delectus error, possimus corporis corrupti! Sunt, consectetur doloremque?
+              </div>
+            </div>
+
+            <div class="folder">
+              <div class="folder-title" onclick="OpenFolder(3)">
+                <h3>Desarrollo front-end (HTML y CSS)</h3>
+                <video autoplay muted loop src="Public/Video/video.mp4"></video>
+              </div>
+
+              <div class="folder-content">
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Fugiat voluptatem eaque ab enim tempore voluptatibus ad
+                  laboriosam. Ullam, atque, quam voluptates nemo hic nam earum
+                  alias eaque expedita nisi eveniet!
                 </p>
-            </div>
-
-            <section id="certificaciones"></section>
-            <h2>Certificaciones</h2>
-            <div class="content-box">
-                <div class="box-grid">
-                    <div class="box-element">
-                        <img src="/Public/SVG/bezier-svgrepo-com.svg">
-                        <h4>Diseño Gráfico con Orientación en Redes Sociales</h4> — Fundación Instituto Latinoamericano de Desarrollo Social y Salud 
-                    </div>
-                    <div class="box-element">
-                        <img src="/Public/SVG/shop-svgrepo-com.svg">
-                        <h4>Marketing Digital Orientado a Redes Sociales</h4> — Centro de Formación Laboral N.º 401 
-                    </div>
-                    <div class="box-element">
-                        <img src="/Public/SVG/book-1-svgrepo-com.svg">
-                        <h4>Otro Título Más</h4> — Universidad universitaria 
-                    </div>
-                    <div class="box-element">
-                        <img src="/Public/SVG/verify-svgrepo-com.svg">
-                        <h4>High School Diploma</h4> — Ramey Unit School, Aguadilla, Puerto Rico
-                    </div>
+                <div class="gif-flex">
+                  <video
+                    autoplay
+                    muted
+                    loop
+                    src="Public/Video/video1.mp4"
+                  ></video>
+                  <video
+                    autoplay
+                    muted
+                    loop
+                    src="Public/Video/video2.mp4"
+                  ></video>
+                  <video
+                    autoplay
+                    muted
+                    loop
+                    src="Public/Video/video3.mp4"
+                  ></video>
                 </div>
+              </div>
             </div>
 
-            <section id="portafolio"></section>
-            <h2>Portafolio artístico</h2>
-            <div class="content-box">
-                <iframe src="https://saisoj23.github.io" frameborder="0"></iframe>
-            </div>
+            <div class="folder">
+              <div class="folder-title" onclick="OpenFolder(4)">
+                <h3>Desarrollo de videojuegos con Unity (C#))</h3>
+                <video autoplay muted loop src="Public/Video/games.mp4"></video>
+              </div>
 
-            <section id="contacto"></section>
-            <h2>Contacto</h2>
-            <div class="content-box">
-                <form method="POST"> <!--action="https://formsubmit.co/cfb3fe480b9721776c6e6d7646b14e54"-->
-                    <label for="name">*Nombre</label>
-                    <input type="text" name="name" required placeholder="Alex Doe">
-                    <label for="email">*E-mail</label>
-                    <input type="email" name="email" required placeholder="alexdoe@email.com">
-                    <label for="subject">*Asunto</label>
-                    <input type="text" name="subject" required placeholder="Un asunto importante">
-                    <label for="phone">Teléfono</label>
-                    <input type="tel" name="phone" placeholder="+54 9 1234-567891" minlength="9" maxlength="14" pattern="/^\(?\d{2}\)?[\s\.-]?\d{4}[\s\.-]?\d{4}$/">
-                    <label for="message">*Mensaje</label>
-                    <textarea name="message" required placeholder="Escribía para consultar sobre..."></textarea>
-                    <p>* Requerido</p>
-
-                    <button type="submit">Enviar</button>
-                </form>
+              <div class="folder-content">
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Fugiat voluptatem eaque ab enim tempore voluptatibus ad
+                  laboriosam. Ullam, atque, quam voluptates nemo hic nam earum
+                  alias eaque expedita nisi eveniet!
+                </p>
+                <div class="gif-flex">
+                  <video
+                    autoplay
+                    muted
+                    loop
+                    src="Public/Video/games1.mp4"
+                  ></video>
+                  <video
+                    autoplay
+                    muted
+                    loop
+                    src="Public/Video/games2.mp4"
+                  ></video>
+                  <video
+                    autoplay
+                    muted
+                    loop
+                    src="Public/Video/games3.mp4"
+                  ></video>
+                </div>
+              </div>
             </div>
-        </article>
+          </div>
+        </div>
+
+        <section id="experiencia"></section>
+        <h2>Experiencia laboral</h2>
+        <div class="content-box">
+          <h3>Trabajo 1</h3>
+          <div class="timeline">
+            <ul class="timeline-notes">
+              <li>10/10/2005</li>
+              <li>10/10/2012</li>
+            </ul>
+            <div class="timeline-ilustration">
+              <div></div>
+              <hr />
+              <div></div>
+            </div>
+          </div>
+          <p>
+            beatae ab est ipsa iusto architecto? Sunt maiores sit sequi minus
+            perferendis iste fugit, labore repudiandae cum eum voluptatibus, rem
+            blanditiis error reiciendis sed reprehenderit nihil ut odio eos!
+            Tenetur asperiores nesciunt quaerat officia cumque ex reiciendis,
+            hic dolor eos sit laudantium non repudiandae, numquam dolore rerum
+            est, sed vero libero. Perspiciatis sequi necessitatibus delectus
+            magni ipsa itaque exercitationem. Assumenda saepe facere delectus ad
+            laborum atque ex fuga itaque eos nobis commodi, rem exercitationem
+            quod ipsa cupiditate debitis illum consequatur doloribus aperiam.
+            Mollitia quae porro deleniti rerum consectetur libero. Reiciendis
+            consequatur debitis voluptas iure in, eius nam praesentium labore
+            error tenetur ipsam, laborum, earum eligendi adipisci cumque aliquam
+            officiis vitae cum. Modi, cumque sed quasi accusantium et minus
+            perspiciatis. Iste, facilis reiciendis. Tempore vel minus ipsam
+            quidem provident. Cupiditate ratione repudiandae eligendi ipsam
+            aliquam veritatis aperiam perspiciatis magnam quibusdam! Voluptatum
+            soluta delectus error, possimus corporis corrupti! Sunt, consectetur
+            doloremque?
+          </p>
+
+          <h3>Trabajo 2</h3>
+          <div class="timeline">
+            <ul class="timeline-notes">
+              <li>10/10/2012</li>
+              <li>10/10/2018</li>
+            </ul>
+            <div class="timeline-ilustration">
+              <div></div>
+              <hr />
+              <div></div>
+            </div>
+          </div>
+          <p>
+            beatae ab est ipsa iusto architecto? Sunt maiores sit sequi minus
+            perferendis iste fugit, labore repudiandae cum eum voluptatibus, rem
+            blanditiis error reiciendis sed reprehenderit nihil ut odio eos!
+            Tenetur asperiores nesciunt quaerat officia cumque ex reiciendis,
+            hic dolor eos sit laudantium non repudiandae, numquam dolore rerum
+            est, sed vero libero. Perspiciatis sequi necessitatibus delectus
+            magni ipsa itaque exercitationem. Assumenda saepe facere delectus ad
+            laborum atque ex fuga itaque eos nobis commodi, rem exercitationem
+            quod ipsa cupiditate debitis illum consequatur doloribus aperiam.
+            Mollitia quae porro deleniti rerum consectetur libero. Reiciendis
+            consequatur debitis voluptas iure in, eius nam praesentium labore
+            error tenetur ipsam, laborum, earum eligendi adipisci cumque aliquam
+            officiis vitae cum. Modi, cumque sed quasi accusantium et minus
+            perspiciatis. Iste, facilis reiciendis. Tempore vel minus ipsam
+            quidem provident. Cupiditate ratione repudiandae eligendi ipsam
+            aliquam veritatis aperiam perspiciatis magnam quibusdam! Voluptatum
+            soluta delectus error, possimus corporis corrupti! Sunt, consectetur
+            doloremque?
+          </p>
+
+          <h3>Trabajo 3</h3>
+          <div class="timeline">
+            <ul class="timeline-notes">
+              <li>10/10/2018</li>
+              <li>Actualidad</li>
+            </ul>
+            <div class="timeline-ilustration">
+              <div></div>
+              <hr />
+              <div></div>
+            </div>
+          </div>
+          <p>
+            beatae ab est ipsa iusto architecto? Sunt maiores sit sequi minus
+            perferendis iste fugit, labore repudiandae cum eum voluptatibus, rem
+            blanditiis error reiciendis sed reprehenderit nihil ut odio eos!
+            Tenetur asperiores nesciunt quaerat officia cumque ex reiciendis,
+            hic dolor eos sit laudantium non repudiandae, numquam dolore rerum
+            est, sed vero libero. Perspiciatis sequi necessitatibus delectus
+            magni ipsa itaque exercitationem. Assumenda saepe facere delectus ad
+            laborum atque ex fuga itaque eos nobis commodi, rem exercitationem
+            quod ipsa cupiditate debitis illum consequatur doloribus aperiam.
+            Mollitia quae porro deleniti rerum consectetur libero. Reiciendis
+            consequatur debitis voluptas iure in, eius nam praesentium labore
+            error tenetur ipsam, laborum, earum eligendi adipisci cumque aliquam
+            officiis vitae cum. Modi, cumque sed quasi accusantium et minus
+            perspiciatis. Iste, facilis reiciendis. Tempore vel minus ipsam
+            quidem provident. Cupiditate ratione repudiandae eligendi ipsam
+            aliquam veritatis aperiam perspiciatis magnam quibusdam! Voluptatum
+            soluta delectus error, possimus corporis corrupti! Sunt, consectetur
+            doloremque?
+          </p>
+        </div>
+
+        <section id="certificaciones"></section>
+        <h2>Certificaciones</h2>
+        <div class="content-box">
+          <div class="box-grid">
+            <div
+              class="box-element"
+              onclick="OpenImageView('/Public/Imagenes/Certificados/diseno_grafico.png')"
+            >
+              <img src="/Public/SVG/Iconos/bezier-svgrepo-com.svg" />
+              <h4>Diseño Gráfico con Orientación en Redes Sociales</h4>
+              — Fundación Instituto Latinoamericano de Desarrollo Social y Salud
+            </div>
+            <div
+              class="box-element"
+              onclick="OpenImageView('/Public/Imagenes/Certificados/marketing_digital.png')"
+            >
+              <img src="/Public/SVG/Iconos/shop-svgrepo-com.svg" />
+              <h4>Marketing Digital Orientado a Redes Sociales</h4>
+              — Centro de Formación Laboral N.º 401
+            </div>
+            <div class="box-element">
+              <img src="/Public/SVG/Iconos/code-svgrepo-com.svg" />
+              <h4>Diplomatura en Desarrollo Frontend</h4>
+              — Universidad UNTREF
+            </div>
+            <div
+              class="box-element"
+              onclick="OpenImageView('/Public/Imagenes/Certificados/high_school.png')"
+            >
+              <img src="/Public/SVG/Iconos/verify-svgrepo-com.svg" />
+              <h4>High School Diploma</h4>
+              — Ramey Unit School, Aguadilla, Puerto Rico
+            </div>
+          </div>
+        </div>
+
+        <section id="portafolio"></section>
+        <h2>Portafolio artístico</h2>
+        <div class="content-box">
+          <p>
+            <img
+              class="float-right"
+              src="Public/Imagenes/phone_portfolio-2.png"
+            />
+
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe
+            obcaecati voluptas, unde porro dolorum praesentium hic excepturi
+            sint placeat iure accusamus odio, similique in blanditiis beatae.
+            Natus veritatis vitae sed. Lorem ipsum dolor, sit amet consectetur
+            adipisicing elit. Saepe obcaecati voluptas, unde porro dolorum
+            praesentium hic excepturi sint placeat iure accusamus odio,
+            similique in blanditiis beatae. Natus veritatis vitae sed. Lorem
+            ipsum dolor, sit amet consectetur adipisicing elit. Saepe obcaecati
+            voluptas, unde porro dolorum praesentium hic excepturi sint placeat
+            iure accusamus odio, similique in blanditiis beatae. Natus veritatis
+            vitae sed.
+          </p>
+
+          <a href="https://saisoj23.github.io" target="_blank">
+            <img class="art-logo" src="Public/SVG/Logos/SaisojArts.svg" />
+          </a>
+        </div>
+
+        <section id="contacto"></section>
+        <h2>Contacto</h2>
+        <div class="content-box">
+          <form method="POST">
+            <!--action="https://formsubmit.co/cfb3fe480b9721776c6e6d7646b14e54"-->
+            <label for="name">*Nombre</label>
+            <input type="text" name="name" required placeholder="Alex Doe" />
+            <label for="email">*E-mail</label>
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="alexdoe@email.com"
+            />
+            <label for="subject">*Asunto</label>
+            <input
+              type="text"
+              name="subject"
+              required
+              placeholder="Un asunto importante"
+            />
+            <label for="phone">Teléfono</label>
+            <input
+              type="tel"
+              name="phone"
+              placeholder="+54 9 1234-567891"
+              minlength="9"
+              maxlength="14"
+              pattern="/^\(?\d{2}\)?[\s\.-]?\d{4}[\s\.-]?\d{4}$/"
+            />
+            <label for="message">*Mensaje</label>
+            <textarea
+              name="message"
+              required
+              placeholder="Escribía para consultar sobre..."
+            ></textarea>
+            <p>* Requerido</p>
+
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </article>
     </main>
 
     <footer>
-            <p>© Todos los derechos reservados</p>
+      <p>© Todos los derechos reservados</p>
     </footer>
-</body>
+  </body>
 </html>

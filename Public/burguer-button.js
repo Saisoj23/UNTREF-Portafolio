@@ -18,12 +18,5 @@ document.addEventListener('DOMContentLoaded', function() {
 function OpenBurguer() {
     console.log("Burguer");
     console.log(nav.contains("hidden"));
-    if (nav.contains("hidden"))
-    {
-        nav.remove("hidden");
-    }
-    else
-    {
-        nav.add("hidden");
-    }
+    nav.toggle("hidden");
 }
