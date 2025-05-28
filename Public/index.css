@@ -322,7 +322,6 @@ article .content-box {
     height: 10rem;
     width: 50%;
     object-fit:cover;
-    background-color: yellowgreen;
     transition: all 300ms ease-out;
 }
 
