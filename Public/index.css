@@ -170,8 +170,12 @@ h1, h2 {
     font-weight: bold;
 }
 
-main figure, main h1, main h2, main h3, main figure, main p{
+main figure, main h1, main h2, main h3, main figure, main p {
     margin-bottom: 1rem;
+}
+
+main p:nth-last-child(1) {
+    margin-bottom: 0rem;
 }
 
 nav {
@@ -308,6 +312,10 @@ article .content-box {
     color: var(--light-tone);
 }
 
+.folder-title:hover video {
+    opacity: 0.5;
+}
+
 .folder:nth-of-type(even) .folder-title{
     flex-direction: row-reverse;
 }
@@ -351,8 +359,8 @@ article .content-box {
     box-shadow: var(--shadow);
 }
 
-.folder-title.visible img{
-    max-width: 0rem;
+.folder-title.visible video{
+    width: 0rem;
 }
 
 .folder-content.visible {
@@ -601,10 +609,10 @@ a:hover {
         line-height: 18px;
     }
 
-    .folder-title img
+    .folder-title video
     {
         height: 6rem;
-        max-width: 12rem;
+        width: 40%;
     }
 
     .folder-content.visible
@@ -617,7 +625,7 @@ a:hover {
         flex-direction: column;
     }
 
-    .gif-flex img
+    .gif-flex video
     {
         width: 100%;
     }
