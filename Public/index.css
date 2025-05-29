@@ -19,6 +19,8 @@
     --light-tone: #F5EEDD;
     --white-tone: #fffdf8;
     --shadow: #00000033 2px 2px 3px 2px;
+    --shadow-inset: inset #00000033 0px 0px 6px 6px;
+    --shadow-inset-textbox: inset #00000022 0px 0px 6px 1px;
     --text-shadow: #00000055 2px 2px 2px;
 
     box-sizing: border-box;
@@ -174,8 +176,8 @@ main figure, main h1, main h2, main h3, main figure, main p {
     margin-bottom: 1rem;
 }
 
-main p:nth-last-child(1) {
-    margin-bottom: 0rem;
+main p:not(:last-child) {
+    text-indent: 2rem;
 }
 
 nav {
@@ -283,7 +285,7 @@ article .content-box {
 }
 
 .profile {
-    width: 15rem;
+    width: 10rem;
     border-radius: 100%;
     box-shadow: var(--shadow);
 }
@@ -293,7 +295,7 @@ article .content-box {
 }
 
 .folder-title {
-    background-color: var(--light-tone);
+    background-color: var(--white-tone);
     position: relative;
     cursor: pointer;
     text-align: center;
@@ -303,13 +305,13 @@ article .content-box {
     box-shadow: var(--shadow);
     border-radius: 24px;
     overflow: hidden;
-    margin-top: 2rem;
     z-index: 30;
 }
 
 .folder-title:hover {
-    background-color: var(--color-a);
-    color: var(--light-tone);
+    background-color: var(--color-c);
+    color: var(--white-tone);
+    box-shadow: var(--shadow-inset);
 }
 
 .folder-title:hover video {
@@ -318,6 +320,10 @@ article .content-box {
 
 .folder:nth-of-type(even) .folder-title{
     flex-direction: row-reverse;
+}
+
+.folder:not(:last-child) {
+    margin-bottom: 2rem;
 }
 
 .folder-title h3 {
@@ -356,7 +362,12 @@ article .content-box {
     overflow: hidden;
     transition: all 300ms ease-out;
     opacity: 0;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-inset);
+}
+
+.folder-content p {
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 .folder-title.visible video{
@@ -365,7 +376,7 @@ article .content-box {
 
 .folder-content.visible {
     padding: 36px 12px 12px 12px;
-    max-height: 25rem;
+    max-height: 35rem;
     opacity: 1;
 }
 
@@ -421,6 +432,7 @@ article .content-box {
     height: 18rem;
     aspect-ratio: 1;
     border-radius: 24px;
+    background-color: var(--white-tone);
     box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;
@@ -430,8 +442,9 @@ article .content-box {
 }
 
 .box-element:hover {
-    background-color: var(--color-a);
-    color: var(--light-tone);
+    background-color: var(--color-c);
+    color: var(--white-tone);
+    box-shadow: var(--shadow-inset);
 }
 
 .box-element h4 {
@@ -446,7 +459,7 @@ article .content-box {
 }
 
 .box-element:hover img{
-    filter: brightness(0) saturate(100%) invert(95%) sepia(3%) saturate(2797%) hue-rotate(319deg) brightness(102%) contrast(102%);
+    filter: brightness(0) saturate(100%) invert(100%) sepia(14%) saturate(0%) hue-rotate(56deg) brightness(108%) contrast(98%);
 }
 
 .float-right {
@@ -502,7 +515,7 @@ form input {
     outline: none;
     border-width: 2px;
     border-style: solid;
-    border-color: white;
+    border-color: var(--white-tone);
 }
 
 form textarea {
@@ -512,17 +525,21 @@ form textarea {
     outline: none;
     border-width: 2px;
     border-style: solid;
-    border-color: white;
+    border-color: var(--white-tone);
 }
 
 form button {
     outline: none;
-    border-width: 2px;
-    border-style: solid;
-    background-color: white;
-    border-color: white;
+    border: none;
+    background-color: var(--white-tone);
     align-self: center;
     font-weight: bold;
+}
+
+form button:hover {
+    background-color: var(--color-c);
+    color: var(--white-tone);
+    box-shadow: var(--shadow-inset);
 }
 
 form input:placeholder-shown:not(:focus), form textarea:placeholder-shown:not(:focus), form button:not(:focus) {
@@ -535,14 +552,16 @@ form input:invalid {
 
 form input:focus, form textarea:focus {
     border-color: #FFBC00ff;
+    box-shadow: var(--shadow-inset-textbox);
 }
 
 form input:valid, form textarea:valid {
     border-color: #539937ff;
 }
 
-form input:placeholder-shown:hover:not(:focus), textarea:placeholder-shown:hover:not(:focus), form button:hover {
+form input:placeholder-shown:hover:not(:focus), textarea:placeholder-shown:hover:not(:focus) {
     border-color: gray;
+    box-shadow: none;
 }
 
 a, button, #burguer {
