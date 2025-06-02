@@ -176,7 +176,7 @@ main figure, main h1, main h2, main h3, main figure, main p {
     margin-bottom: 1rem;
 }
 
-main p:not(:last-child) {
+main p {
     text-indent: 2rem;
 }
 
@@ -225,7 +225,7 @@ nav a:hover {
 
 article {
     padding: 6rem 40px 40px 40px;
-    width: 80%;
+    width: 85%;
     justify-self: right;
 }
 
@@ -492,6 +492,10 @@ form {
     justify-self: center;
 }
 
+form p {
+    text-indent: 0 !important;
+}
+
 form input, form textarea {
     width: 100%;
 }
@@ -578,6 +582,13 @@ a:hover {
     filter: brightness(0) saturate(100%) invert(32%) sepia(14%) saturate(7028%) hue-rotate(337deg) brightness(89%) contrast(86%)
 }
 
+@media only screen and (min-aspect-ratio: 6/5) and (max-width: 900px) {
+    article
+    {
+        width: 80%;
+    }
+}
+
 @media only screen and (max-aspect-ratio: 6/5) {
 
     :root 
@@ -647,6 +658,11 @@ a:hover {
     .gif-flex video
     {
         width: 100%;
+    }
+
+    .float-right
+    {
+        float: none;
     }
 
     #burguer 
