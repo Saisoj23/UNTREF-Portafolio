@@ -1,10 +1,8 @@
 let title;
 let content;
 
-document.addEventListener('DOMContentLoaded', function() {
-    content = document.getElementsByClassName('folder-content');
-    title = document.getElementsByClassName('folder-title');
-});
+content = document.getElementsByClassName('folder-content');
+title = document.getElementsByClassName('folder-title');
 
 function OpenFolder(index)
 {

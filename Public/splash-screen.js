@@ -1,8 +1,6 @@
 let splash;
 
-document.addEventListener('DOMContentLoaded', function() {
-    splash = document.getElementById('splash').classList;
-});
+splash = document.getElementById('splash').classList;
 
 window.addEventListener('scroll', () => {
     const scrolled = window.scrollY;
